@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>global</name>
+    <events>
+        <variable constant="1" name="LEVEL_SELECT" sid="666905071487325" static="0" type="text">LEVEL_SELECT</variable>
+        <variable constant="0" name="life" sid="167749455635723" static="0" type="number">2</variable>
+        <variable constant="0" name="coinsEnd" sid="481661014733609" static="0" type="number">0</variable>
+        <variable constant="0" name="coinStart" sid="705021729053484" static="0" type="number">0</variable>
+        <variable constant="0" name="score" sid="352956242670317" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

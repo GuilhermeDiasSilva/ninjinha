@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>engine</name>
+    <events>
+        <comment>quando starta o layout</comment>
+        <comment>o pin é para o fakeheroficar grudado com o hero para o lugar que ele for</comment>
+        <comment>para contar o valor de moedas</comment>
+        <event-block sid="114587413534905">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="830609842255018" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="512397206816723" type="fakeHero">
+                    <param id="0" name="Pin to">hero</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="573965268588926" type="System">
+                    <param id="0" name="Variable">coinStart</param>
+                    <param id="1" name="Value">coin.Count</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>teclas de movimento</comment>
+        <comment>para simular o moviento da frame para a direita</comment>
+        <comment>not mirrored para nao deixar espelhado</comment>
+        <event-block sid="710058538458153">
+            <conditions>
+                <condition id="2" name="Key is down" sid="732500893544072" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="361749611707908" type="hero">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="381556280447501" type="fakeHero">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="472141553979555" type="fakeHero">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>movimentar para a esquerda quando apertar a tcela a</comment>
+        <comment>quando ir para a esquerda ele ficar com a frame espelhada</comment>
+        <event-block sid="470953040133774">
+            <conditions>
+                <condition id="2" name="Key is down" sid="290428500916608" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="236848481507512" type="hero">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="407615321135822" type="fakeHero">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="117204124478516" type="fakeHero">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>quando apertar a tecla w ele pular</comment>
+        <comment>e quando tiver a frame de pulo a frame que estiver andando pare</comment>
+        <comment>quando ele pular atiavr a frame de pulo</comment>
+        <event-block sid="242368605008940">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="121656608668865" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="548332781319747" type="fakeHero">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="138881588777152" type="hero">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="745470529015819" type="fakeHero">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>quando andar a frame seguira a tecla pressionada</comment>
+        <event-block sid="891886231917766">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="927378329494565" type="hero" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="118213080969894">
+                    <conditions>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="732849934220860" type="hero">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="849005923038650" type="fakeHero">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="780642521714748">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="884709810245061" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="840749884649408" type="fakeHero">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>quando estiver parado a frame ficara a dele paradpo</comment>
+        <event-block sid="131509423407852">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="356146537094560" type="hero" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="838445596950218" type="fakeHero">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>quando colidir com a moeda a moeda some e aparece somando 10 na score,e acionando o efeito de particulas</comment>
+        <comment>coins end para cada moeda somar 1 na variavel com o tanto de moedas que tem no layout</comment>
+        <comment>fazendo assim ele passar de fase</comment>
+        <event-block sid="785216943452291">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="213243786934748" type="hero">
+                    <param id="0" name="Object">coin</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="797386154833934" type="coin" />
+                <action id="0" name="Spawn another object" sid="297305992590800" type="coin">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="975389686275549" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-10" name="Add to" sid="110310049674216" type="System">
+                    <param id="0" name="Variable">coinsEnd</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>quando pegar todas as moedas que tem no layout a cheve tem que aparecer</comment>
+        <event-block sid="622686207163817">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="281957333174912" type="System">
+                    <param id="0" name="Variable">coinsEnd</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">coinStart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="986337316473264" type="key">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>quando o fake hero tiver com  a chave e colidir com a porta fazendo com que ele soma 100 pontos na score</comment>
+        <comment>ao pegar a chave fazer que ela suma, ao pegar a chave fazer com que a porta abra</comment>
+        <event-block sid="907693534152177">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="742935816321510" type="hero">
+                    <param id="0" name="Object">key</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="821957071091843" type="key" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="626853986813049" type="door">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="597041934055084" type="key" />
+                <action id="0" name="Spawn another object" sid="836199202141487" type="key">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="256648636535953" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>a todo momento = every tick</comment>
+        <comment>total na score e total de vida a todo momento aprecendo na tela</comment>
+        <comment>a life a cada colisao com objeto faz com que ele perca um pouco de vida</comment>
+        <event-block sid="520942014999223">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="862095557211899" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="645191849977803" type="txtScore">
+                    <param id="0" name="Text">score</param>
+                </action>
+                <action id="5" name="Set frame" sid="356662554750288" type="Sprite">
+                    <param id="0" name="Frame number">life</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>quando o fake hero colidir com o objeto em posicao </comment>
+        <comment>fazendo com ele pule</comment>
+        <comment>quando ele colodir com o jump que é Y sendo maior menor que o fake  hero levara ele a um impuslso subindo</comment>
+        <comment>e depois de 1 segundo que foi usado o jump ele volte ao normal</comment>
+        <event-block sid="749719221194768">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="595566730421926" type="hero">
+                    <param id="0" name="Object">jump</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="451705431629048" type="jump">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="503925863261657" type="hero">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">jump.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="476465119990924" type="hero">
+                    <param id="0" name="Jump strength">1300</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="521311830578388" type="hero">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="5" name="Set frame" sid="915727696255246" type="jump">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="156946567484142" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="992825714357588" type="hero">
+                    <param id="0" name="Jump strength">650</param>
+                </action>
+                <action id="5" name="Set frame" sid="519575769307735" type="jump">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>quando ele colidir com o objeto</comment>
+        <event-block sid="411236042550362">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="326657169943405" type="hero">
+                    <param id="0" name="Object">colisao</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>quando colidir com o ojeto subtrair 1 na vida </comment>
+                <comment> com o fash de um segundo ele ficara imune ao objeto</comment>
+                <event-block sid="654471183650177">
+                    <conditions>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="492366686678618" type="fakeHero" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="493318800816291" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="844785233276281" type="fakeHero">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>ao colidir com a porta faça com que ele passe de fase</comment>
+        <comment>enquando nao pegar a chave ficara com  a frame 0 ao pegar a chave passara a frame 1</comment>
+        <event-block sid="435139066763869">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="232682082390535" type="hero">
+                    <param id="0" name="Object">door</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="881840470108989" type="door">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="341280196199283" type="Function">
+                    <param id="0" name="Name">&quot;nextLevel&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>quando iniciar o jogo a fase 1 tem que estar liberada, e conforme for passando ira salvar na memoria </comment>
+        <event-block sid="192912248884037">
+            <conditions>
+                <condition id="0" name="On function" sid="288340454765044" type="Function">
+                    <param id="0" name="Name">&quot;nextLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="230899619990145" type="System">
+                    <param id="0" name="Layout">&quot;level&quot;&amp;door.level</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment></comment>
+                <event-block sid="766927471212369">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="543042224055337" type="System">
+                            <param id="0" name="First value">int(WebStorage.LocalValue(LEVEL_SELECT))</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">door.level - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="123209470591809" type="WebStorage">
+                            <param id="0" name="Key">LEVEL_SELECT</param>
+                            <param id="1" name="Value">door.level</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

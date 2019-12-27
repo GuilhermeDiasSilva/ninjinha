@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>AdventureGame</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1qh5fl43n6j78</unique-id>
+    <saved-with-version>27200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="hero" sid="780812552454744">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="522851897815597">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="835792678076860">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="991570586229350" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="chao" sid="772935772966713">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="673515644341801">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382917513974019" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="coin" sid="623787329835748">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="165688614489387" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.473684" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\coin.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="749930221929879">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576383746463151" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500437" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fakeHero" sid="908878458253347">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="870679380119215">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="959891799105102">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="12" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803527103293229" speed="20">
+                    <frame duration="1" hotspotX="0.582222" hotspotY="0.451902" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_000.png">
+                        <collision-poly>
+                            <point x="0.08" y="0.199105" />
+                            <point x="0.582222" y="0.102908" />
+                            <point x="0.964444" y="0.259508" />
+                            <point x="0.933333" y="0.451902" />
+                            <point x="0.8" y="0.561521" />
+                            <point x="0.582222" y="0.995526" />
+                            <point x="0.36" y="0.563758" />
+                            <point x="0.04" y="0.451902" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.582222" hotspotY="0.453125" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_001.png" />
+                    <frame duration="1" hotspotX="0.582222" hotspotY="0.454343" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_002.png" />
+                    <frame duration="1" hotspotX="0.584821" hotspotY="0.455556" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_003.png" />
+                    <frame duration="1" hotspotX="0.584821" hotspotY="0.456763" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_004.png" />
+                    <frame duration="1" hotspotX="0.587444" hotspotY="0.456763" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_005.png" />
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.457965" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_006.png" />
+                    <frame duration="1" hotspotX="0.585586" hotspotY="0.456763" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_007.png" />
+                    <frame duration="1" hotspotX="0.58296" hotspotY="0.456763" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_008.png" />
+                    <frame duration="1" hotspotX="0.584821" hotspotY="0.455556" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_009.png" />
+                    <frame duration="1" hotspotX="0.582222" hotspotY="0.454343" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_010.png" />
+                    <frame duration="1" hotspotX="0.582222" hotspotY="0.453125" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\default\Idle_011.png" />
+                </animation>
+                <animation framecount="8" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="215578482824379" speed="10">
+                    <frame duration="1" hotspotX="0.481982" hotspotY="0.451025" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\run\Run_000.png" />
+                    <frame duration="1" hotspotX="0.481982" hotspotY="0.447661" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\run\Run_001.png" />
+                    <frame duration="1" hotspotX="0.481982" hotspotY="0.458613" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\run\Run_002.png" />
+                    <frame duration="1" hotspotX="0.481982" hotspotY="0.445676" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\run\Run_003.png" />
+                    <frame duration="1" hotspotX="0.45339" hotspotY="0.443946" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\run\Run_004.png" />
+                    <frame duration="1" hotspotX="0.481982" hotspotY="0.442731" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\run\Run_005.png" />
+                    <frame duration="1" hotspotX="0.481982" hotspotY="0.45354" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\run\Run_006.png" />
+                    <frame duration="1" hotspotX="0.481982" hotspotY="0.446667" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\run\Run_007.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="211142909072671" speed="30">
+                    <frame duration="1" hotspotX="0.570175" hotspotY="0.436652" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\attack\Attack_002.png" />
+                    <frame duration="1" hotspotX="0.302115" hotspotY="0.427293" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\attack\Attack_003.png" />
+                    <frame duration="1" hotspotX="0.279202" hotspotY="0.431461" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\attack\Attack_004.png" />
+                    <frame duration="1" hotspotX="0.312139" hotspotY="0.444695" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\attack\Attack_007.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="attack2" pingpong="0" repeatcount="1" repeatto="0" sid="705015686682583" speed="30">
+                    <frame duration="1" hotspotX="0.465201" hotspotY="0.449664" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\attack2\Shot_000.png">
+                        <collision-poly>
+                            <point x="0.0659341" y="0.205817" />
+                            <point x="0.465201" y="0.100671" />
+                            <point x="0.791209" y="0.250559" />
+                            <point x="0.765568" y="0.449664" />
+                            <point x="0.886447" y="0.706935" />
+                            <point x="0.465201" y="0.997763" />
+                            <point x="0.285714" y="0.559284" />
+                            <point x="0.029304" y="0.449664" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.380814" hotspotY="0.449664" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\attack2\Shot_001.png" />
+                    <frame duration="1" hotspotX="0.436242" hotspotY="0.450893" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\attack2\Shot_002.png" />
+                    <frame duration="1" hotspotX="0.468864" hotspotY="0.449664" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\attack2\Shot_003.png" />
+                </animation>
+                <animation framecount="2" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="973436945120696" speed="5">
+                    <frame duration="1" hotspotX="0.377193" hotspotY="0.378788" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\jumb\Jump_002.png">
+                        <collision-poly>
+                            <point x="0.131579" y="0.237374" />
+                            <point x="0.377193" y="0.111111" />
+                            <point x="0.912281" y="0.0707071" />
+                            <point x="0.973684" y="0.378788" />
+                            <point x="0.798246" y="0.621212" />
+                            <point x="0.377193" y="0.992424" />
+                            <point x="0.153509" y="0.507576" />
+                            <point x="0.0657895" y="0.378788" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.460905" hotspotY="0.495349" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\personagem\jumb\Jump_004.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="625554525415260">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Touch" sid="640794933002135">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="txtScore" sid="902360833816723">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Particles" sid="566183589009833">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="key" sid="159711277453445">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="537916301399820" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.578947" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\objetivo\keyYellow.png">
+                        <collision-poly>
+                            <point x="0.177419" y="0.0526316" />
+                            <point x="0.5" y="0.368421" />
+                            <point x="0.629032" y="0.368421" />
+                            <point x="0.967742" y="0.578947" />
+                            <point x="0.725806" y="0.947368" />
+                            <point x="0.5" y="0.631579" />
+                            <point x="0.258065" y="0.973684" />
+                            <point x="0.016129" y="0.578947" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="door" sid="240194159485116">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="level" sid="223772692779572" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542030086842076" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\objetivo\doorClose.png">
+                        <collision-poly>
+                            <point x="0.128571" y="0.0833333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.871429" y="0.0833333" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.504587" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\objetivo\doorOpen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="jump" sid="351528478898227">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="344092917981140">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807216381635921" speed="0">
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.0526316" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\jump\springboardDown.png">
+                        <collision-poly>
+                            <point x="0.513889" y="0.0263158" />
+                            <point x="0.930556" y="0.0526316" />
+                            <point x="0.763889" y="0.552632" />
+                            <point x="0.5" y="0.973684" />
+                            <point x="0.236111" y="0.552632" />
+                            <point x="0.0694444" y="0.0526316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.307692" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\jump\springboardUp.png">
+                        <collision-poly>
+                            <point x="0.291667" y="0.0192308" />
+                            <point x="0.708333" y="0.0192308" />
+                            <point x="0.972222" y="0.307692" />
+                            <point x="0.5" y="0.980769" />
+                            <point x="0.375" y="0.480769" />
+                            <point x="0.0277778" y="0.307692" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="230531848557429">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="828579909159857" speed="0">
+                    <frame duration="1" hotspotX="0.509434" hotspotY="0.511111" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\hud\hud_heartEmpty.png">
+                        <collision-poly>
+                            <point x="0.0943396" y="0.111111" />
+                            <point x="0.490566" y="0.0666667" />
+                            <point x="0.90566" y="0.111111" />
+                            <point x="0.962264" y="0.488889" />
+                            <point x="0.773585" y="0.733333" />
+                            <point x="0.490566" y="1" />
+                            <point x="0.207547" y="0.755556" />
+                            <point x="0.0188679" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.509434" hotspotY="0.511111" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\hud\hud_heartHalf.png" />
+                    <frame duration="1" hotspotX="0.509434" hotspotY="0.511111" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\objetos\hud\hud_heartFull.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="colisao" sid="637042918413067">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="691293372892354" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap" sid="629905356699002">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\tileset.png" />
+            <tiles />
+        </object-type>
+        <object-type name="GUI" sid="436765482005890">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860672797126267" speed="5">
+                    <frame duration="1" hotspotX="0.500478" hotspotY="0.500597" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\gui\gui.png">
+                        <collision-poly>
+                            <point x="0.0851675" y="0.106332" />
+                            <point x="0.499522" y="0.00358423" />
+                            <point x="0.913876" y="0.107527" />
+                            <point x="1" y="0.499403" />
+                            <point x="0.921531" y="0.902031" />
+                            <point x="0.499522" y="0.996416" />
+                            <point x="0.077512" y="0.903226" />
+                            <point x="0" y="0.499403" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="start" sid="999308534238775">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="678334084795233" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\gui\lvl\Start.png">
+                        <collision-poly>
+                            <point x="0.0745856" y="0.133663" />
+                            <point x="0.5" y="0.118812" />
+                            <point x="0.925414" y="0.133663" />
+                            <point x="1" y="0.5" />
+                            <point x="0.966851" y="0.940594" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0359116" y="0.935644" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="levelselect" sid="888433653590241">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="level" sid="691060625123768" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170479687935966" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\gui\lvl\levelblock.png">
+                        <collision-poly>
+                            <point x="0.0681818" y="0.0674157" />
+                            <point x="0.5" y="0" />
+                            <point x="0.926136" y="0.0730337" />
+                            <point x="1" y="0.5" />
+                            <point x="0.926136" y="0.926966" />
+                            <point x="0.5" y="0.994382" />
+                            <point x="0.0681818" y="0.932584" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\material10255\PlataformaArquivos\gui\lvl\levelok.png">
+                        <collision-poly>
+                            <point x="0.0738636" y="0.0730337" />
+                            <point x="0.5" y="0" />
+                            <point x="0.931818" y="0.0674157" />
+                            <point x="1" y="0.5" />
+                            <point x="0.931818" y="0.932584" />
+                            <point x="0.5" y="0.994382" />
+                            <point x="0.0738636" y="0.926966" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WebStorage" sid="365696131720686">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Function" sid="244821352514618">
+            <plugin id="Function" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>menu.xml</layout>
+        <layout>levelselect.xml</layout>
+        <layout>level1.xml</layout>
+        <layout>level2.xml</layout>
+        <layout>level3.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>engine.xml</event-sheet>
+        <event-sheet>global.xml</event-sheet>
+        <event-sheet>menu.xml</event-sheet>
+        <event-sheet>levelselect.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="17" />
+        <global-instance type="Touch" uid="18">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="WebStorage" uid="35" />
+        <global-instance type="Function" uid="80" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
